@@ -17,12 +17,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void go(View view) {
-     Button  btn = (Button) findViewById(R.id.btn);
+        Button btn = findViewById(R.id.btn);
+        final int[] count = {0};
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btn.setText("Oh, yea, I’ve been clicked!");
+                count[0]++;
+                btn.setText("This is a click number: " + count[0]);
             }
         });
     }
+
 }
+
+
